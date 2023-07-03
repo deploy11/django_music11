@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Bosh sahifa{% endblock title %} 
+{% block content %}
+    {% for blog in blog %}
+        <h1>{{ blog.name }}</h1>
+        <a  class="btn btn-primary" href="{% url 'det' blog.id %}">detail</a>
+    {% endfor %}
+{% endblock content %}
